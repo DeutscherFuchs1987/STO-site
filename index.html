@@ -51,6 +51,94 @@
                      <br><span class="word">в подарок</span> </h2>
             </section>
         </div>
+        <div class="stock">
+            <div class="stock-header">
+                <h1>Новогодняя акция!</h1>
+                <div class="countdown-timer">
+                    <div class="timer-block">
+                        <span id="days">15</span><span class="timer-label">д</span>
+                    </div>
+                    <div class="timer-block">
+                        <span id="hours">00</span><span class="timer-label">ч</span>
+                    </div>
+                    <div class="timer-block">
+                        <span id="minutes">00</span><span class="timer-label">м</span>
+                    </div>
+                    <div class="timer-block">
+                        <span id="seconds">00</span><span class="timer-label">с</span>
+                    </div>
+                </div>
+            </div>
+            <h2>Приведи друга на ремонт и получи бесплатную замену лампочек</h2>
+        </div>
+        <div class="specialists">
+            <h1>Наши специалисты</h1>
+            <div class="specialists_content">
+                <div class="specialists_charter">
+                    <img src="image/spc.png" alt="">
+                    <div class="specialists_text">
+                        <p>Виталий Кличко</p>
+                        <p>Опыт работы: 15 лет</p>
+                        <p>Электромеханник</p>
+                    </div>
+                </div>
+                <div class="specialists_charter">
+                    <img src="image/spc1.png" alt="">
+                    <div class="specialists_text">
+                        <p>Александр Кристапов</p>
+                        <p>Опыт работы: 10 лет</p>
+                        <p>Автомеханник</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work">
+            <h1>Как мы работаем?</h1>
+            <div class="work_content">
+                <div class="work_unit">
+
+                </div>
+                <div class="work_unit">
+                    
+                </div>
+                <div class="work_unit">
+                    
+                </div>
+                <div class="work_unit">
+                    
+                </div>
+            </div>
+        </div>
     </main>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 15);
+    
+    function updateTimer() {
+        const now = new Date();
+        const diff = endDate - now;
+        
+        if (diff <= 0) {
+            document.querySelector('.countdown-timer').innerHTML = "Акция завершена!";
+            return;
+        }
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        
+        setTimeout(updateTimer, 1000);
+    }
+    
+    updateTimer();
+});
+</script>
 </body>
 </html>

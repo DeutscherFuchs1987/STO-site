@@ -144,5 +144,90 @@ nav a{
 }
 
 main{
+    display: flex;
+    flex-direction: column;
     padding: 30px;
+    gap: 30px;
+}
+
+.stock {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF9900;
+    padding: 20px;
+    text-align: center; /* Центрируем весь контент */
+}
+
+.stock-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.stock h1 {
+    color: #33FF00;
+    margin: 0 0 15px 0;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 5px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    justify-content: center; /* Центрируем таймер */
+    margin-bottom: 15px;
+}
+
+.timer-block {
+    display: flex;
+    align-items: baseline; /* Выравниваем числа и подписи по базовой линии */
+}
+
+.timer-block span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF9900;
+}
+
+.timer-block .timer-label {
+    font-size: 16px;
+    color: #666;
+    margin-left: 2px;
+}
+
+.specialists{
+    background-color: #FF9900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.specialists img{
+    width: 250px;
+    height: 250px;
+}
+
+.specialists_content{
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+}
+
+.specialists_charter{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 30px  
+}
+
+.specialists_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.specialists p{
+    font-size: 20pt;
 }
