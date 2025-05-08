@@ -231,3 +231,55 @@ main{
 .specialists p{
     font-size: 20pt;
 }
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #000;
+}
+
+.work{
+    padding: 30px;
+    background-color: #FF9900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.work_content{
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+}
+
+.work_unitt{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.work_unit p{
+    font-size: 20;
+}
+
+.work_unitt{
+
+}
+
+.work img{
+    width: 300px;
+    height: 50px;
+}
+
+.work_unit{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
